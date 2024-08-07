@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Reader books</title>
+</head>
+<body>
+    <h3>Читатель: <span th:text="${reader.name}"></span></h3>
+    <h3>Список книг:</h3>
+    <ul>
+        <li th:each="book:${books}" th:text="${book.name}"></li>
+    </ul>
+
+</body>
+</html>

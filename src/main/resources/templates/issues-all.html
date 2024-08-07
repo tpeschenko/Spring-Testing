@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Issues all</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Книга</th>
+            <th>Читатель</th>
+            <th>Выдана</th>
+            <th>Возвращена</th>
+        </tr>
+        <tr th:each="report: ${reports}">
+            <td th:text="${report.bookName}"></td>
+            <td th:text="${report.readerName}"></td>
+            <td th:text="${report.issued_at}"></td>
+            <td th:text="${report.returned_at}"></td>
+        </tr>
+    </table>
+
+</body>
+</html>
